@@ -1,0 +1,27 @@
+{
+  "name": "trace",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "active-win": "^8.2.1",
+    "dotenv": "^18.0.1",
+    "groq-sdk": "^1.6.0",
+    "socket.io-client": "^4.8.3",
+    "systeminformation": "^5.33.12"
+  },
+  "allowScripts": {
+    "active-win@8.2.1": true
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3"
+  }
+}

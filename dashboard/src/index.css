@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #09090b; /* Tailwind zinc-950 */
+  margin: 0;
+  overflow-x: hidden;
+}
