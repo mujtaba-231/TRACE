@@ -1,9 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,200..600&display=swap');
+@import "tailwindcss";
+/* If you're on Tailwind v3, replace the line above with:
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+(and keep the font @import first) */
 
-body {
-  background-color: #09090b; /* Tailwind zinc-950 */
+:root {
+  /* Paper */
+  --bg: #f3eee3;
+  --panel: #faf7f0;
+  --border: #e3dbc9;
+
+  /* Ink */
+  --text: #2b2622;
+  --muted: #857a6d;
+  --faint: #b3a898;
+
+  /* Clay (primary) and sage (secondary) */
+  --accent: #c96442;
+  --accent-text: #a4512f;
+  --accent-soft: #f2ded3;
+  --sage: #718f7b;
+  --sage-soft: #dfe8e0;
+
+  /* Screensaver */
+  --night: #1f1b18;
+  --night-text: #f3eee3;
+  --night-muted: #9c9083;
+
+  --font-serif: 'Newsreader', 'Iowan Old Style', Georgia, serif;
+  --font-sans: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
   margin: 0;
-  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.f-serif { font-family: var(--font-serif); }
+.f-mono  { font-family: var(--font-mono); }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
 }
