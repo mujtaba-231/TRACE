@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react'
 import { io } from 'socket.io-client'
 
-const socket = io('http://localhost:3000')
+// Replace the URL with your actual Ngrok HTTPS link
+const socket = io("https://habitable-revenue-copy.ngrok-free.dev", {
+  extraHeaders: {
+    "ngrok-skip-browser-warning": "true" // Bypasses the free-tier interstitial page
+  }
+});
 
 function App() {
   const [telemetry, setTelemetry] = useState({
