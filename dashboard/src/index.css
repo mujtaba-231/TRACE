@@ -2,34 +2,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* If you're on Tailwind v3, replace the line above with:
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-(and keep the font @import first) */
 
 :root {
-  /* Paper */
-  --bg: #f3eee3;
-  --panel: #faf7f0;
-  --border: #e3dbc9;
+  /* Warm Claude-inspired Paper */
+  --bg: #f8f6f0;
+  --panel: #ffffff;
+  --border: #e6e2d6;
 
-  /* Ink */
-  --text: #2b2622;
-  --muted: #857a6d;
-  --faint: #b3a898;
+  /* Rich Charcoal Ink */
+  --text: #23211f;
+  --muted: #79716b;
+  --faint: #b8b0a5;
 
-  /* Clay (primary) and sage (secondary) */
-  --accent: #c96442;
-  --accent-text: #a4512f;
-  --accent-soft: #f2ded3;
-  --sage: #718f7b;
-  --sage-soft: #dfe8e0;
+  /* Terracotta (primary) and Muted Moss (secondary) */
+  --accent: #c46238;
+  --accent-text: #a04d26;
+  --accent-soft: #faece6;
+  --sage: #5f7a68;
+  --sage-soft: #e5ede7;
 
-  /* Screensaver */
-  --night: #1f1b18;
-  --night-text: #f3eee3;
-  --night-muted: #9c9083;
+  /* Cozy Espresso Night Mode */
+  --night: #171513;
+  --night-text: #f5f2eb;
+  --night-muted: #948b80;
 
   --font-serif: 'Newsreader', 'Iowan Old Style', Georgia, serif;
   --font-sans: 'Hanken Grotesk', system-ui, sans-serif;
