@@ -14,7 +14,7 @@ app.use(express.json());
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173",
+        origin: "*", // Allows your future Vercel URL to connect
         methods: ["GET", "POST"]
     }
 });
@@ -22,8 +22,15 @@ const io = new Server(server, {
 // Initialize Groq
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
-// Connect to MongoDB Atlas
-mongoose.connect('mongodb+srv://imujtabadar_db_user:0PJtrUByXnIT9i6u@cluster0.lzs4dr8.mongodb.net/?appName=Cluster0')
+// Connect to MongoDB Atlas securely
+const mongoURI = process.env.MONGO_URI;
+
+if (!mongoURI) {
+    console.error("CRITICAL ERROR: MONGO_URI is not defined in the environment variables.");
+    process.exit(1);
+}
+
+mongoose.connect(mongoURI)
     .then(() => console.log('📂 MongoDB Connected: fbi_os database'))
     .catch(err => console.error('MongoDB connection error:', err));
 
@@ -110,7 +117,8 @@ io.on('connection', async (socket) => {
     });
 });
 
-// Start Server
-server.listen(3000, () => {
-    console.log('FBI Command Center active on port 3000');
+// Start Server with dynamic cloud port
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+    console.log(`TRACE Command Center active on port ${PORT}`);
 });
