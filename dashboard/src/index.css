@@ -1,33 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,200..600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Warm Claude-inspired Paper */
-  --bg: #f8f6f0;
-  --panel: #ffffff;
-  --border: #e6e2d6;
+  /* Sleek Developer Dark Theme */
+  --bg: #090a0f;
+  --panel: #12141c;
+  --border: #1e222e;
 
-  /* Rich Charcoal Ink */
-  --text: #23211f;
-  --muted: #79716b;
-  --faint: #b8b0a5;
+  /* Crisp Tech Text */
+  --text: #f0f6fc;
+  --muted: #8b949e;
+  --faint: #484f58;
 
-  /* Terracotta (primary) and Muted Moss (secondary) */
-  --accent: #c46238;
-  --accent-text: #a04d26;
-  --accent-soft: #faece6;
-  --sage: #5f7a68;
-  --sage-soft: #e5ede7;
+  /* Terminal Emerald (Primary) and System Blue (Secondary) */
+  --accent: #2ea043;
+  --accent-text: #3fb950;
+  --accent-soft: #0d2818;
+  --sage: #388bfd;
+  --sage-soft: #0c2340;
 
-  /* Cozy Espresso Night Mode */
-  --night: #171513;
-  --night-text: #f5f2eb;
-  --night-muted: #948b80;
+  /* Alternate Panel */
+  --night: #05070b;
+  --night-text: #f0f6fc;
+  --night-muted: #8b949e;
 
-  --font-serif: 'Newsreader', 'Iowan Old Style', Georgia, serif;
-  --font-sans: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-serif: 'Plus Jakarta Sans', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
@@ -42,13 +42,13 @@ body,
   -webkit-font-smoothing: antialiased;
 }
 
-.f-serif { font-family: var(--font-serif); }
+.f-serif { font-family: var(--font-sans); }
 .f-mono  { font-family: var(--font-mono); }
 
 .card {
   background: var(--panel);
   border: 1px solid var(--border);
-  border-radius: 1.25rem;
+  border-radius: 0.875rem;
 }
 
 button:focus-visible {
